@@ -1,0 +1,16 @@
+# EditorExportPlatformAppleEmbedded
+
+**Inherits:** [EditorExportPlatform](class_editorexportplatform.md#class-editorexportplatform) **<** [RefCounted](class_refcounted.md#class-refcounted) **<** [Object](class_object.md#class-object)
+
+**Inherited By:** [EditorExportPlatformIOS](class_editorexportplatformios.md#class-editorexportplatformios), [EditorExportPlatformVisionOS](class_editorexportplatformvisionos.md#class-editorexportplatformvisionos)
+
+Base class for the Apple embedded platform exporters (iOS and visionOS).
+
+## Description
+
+The base class for Apple embedded platform exporters. These include iOS and visionOS, but not macOS. See the classes inheriting from this one for more details.
+
+## Tutorials
+
+- [Exporting for iOS](../tutorials/export/exporting_for_ios.md)
+- [iOS plugins documentation index](../tutorials/platform/ios/index.md)

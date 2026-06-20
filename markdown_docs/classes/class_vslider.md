@@ -1,0 +1,15 @@
+# VSlider
+
+**Inherits:** [Slider](class_slider.md#class-slider) **<** [Range](class_range.md#class-range) **<** [Control](class_control.md#class-control) **<** [CanvasItem](class_canvasitem.md#class-canvasitem) **<** [Node](class_node.md#class-node) **<** [Object](class_object.md#class-object)
+
+A vertical slider that goes from bottom (min) to top (max).
+
+## Description
+
+A vertical slider, used to adjust a value by moving a grabber along a vertical axis. It is a [Range](class_range.md#class-range)-based control and goes from bottom (min) to top (max). Note that this direction is the opposite of [VScrollBar](class_vscrollbar.md#class-vscrollbar)'s.
+
+## Properties
+
+| [[SizeFlags](class_control.md#enum-control-sizeflags)]   | size_flags_horizontal   | `0` (overrides [Control](class_control.md#class-control-property-size-flags-horizontal))   |
+|----------------------------------------------------------|-------------------------|--------------------------------------------------------------------------------------------|
+| [[SizeFlags](class_control.md#enum-control-sizeflags)]   | size_flags_vertical     | `1` (overrides [Control](class_control.md#class-control-property-size-flags-vertical))     |

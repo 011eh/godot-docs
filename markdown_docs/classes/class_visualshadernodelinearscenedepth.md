@@ -1,0 +1,9 @@
+# VisualShaderNodeLinearSceneDepth
+
+**Inherits:** [VisualShaderNode](class_visualshadernode.md#class-visualshadernode) **<** [Resource](class_resource.md#class-resource) **<** [RefCounted](class_refcounted.md#class-refcounted) **<** [Object](class_object.md#class-object)
+
+A visual shader node that returns the depth value of the DEPTH_TEXTURE node in a linear space.
+
+## Description
+
+This node can be used in fragment shaders.

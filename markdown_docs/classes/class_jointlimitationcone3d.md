@@ -1,0 +1,27 @@
+# JointLimitationCone3D
+
+**Inherits:** [JointLimitation3D](class_jointlimitation3d.md#class-jointlimitation3d) **<** [Resource](class_resource.md#class-resource) **<** [RefCounted](class_refcounted.md#class-refcounted) **<** [Object](class_object.md#class-object)
+
+A cone shape limitation that interacts with [ChainIK3D](class_chainik3d.md#class-chainik3d).
+
+## Description
+
+A cone shape limitation that interacts with [ChainIK3D](class_chainik3d.md#class-chainik3d).
+
+## Properties
+
+| [float](class_float.md#class-float)   | angle   | `1.5707964`   |
+|---------------------------------------|--------------------------------------------------------|---------------|
+
+---
+
+## Property Descriptions
+
+[float](class_float.md#class-float) **angle** = `1.5707964`
+
+-  **set_angle**(value: [float](class_float.md#class-float))
+- [float](class_float.md#class-float) **get_angle**()
+
+The radius range of the hole made by the cone.
+
+`0` degrees makes a sphere without hole, `180` degrees makes a hemisphere, and `360` degrees become empty (no limitation).

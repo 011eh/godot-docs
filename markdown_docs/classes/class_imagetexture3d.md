@@ -1,0 +1,31 @@
+# ImageTexture3D
+
+**Inherits:** [Texture3D](class_texture3d.md#class-texture3d) **<** [Texture](class_texture.md#class-texture) **<** [Resource](class_resource.md#class-resource) **<** [RefCounted](class_refcounted.md#class-refcounted) **<** [Object](class_object.md#class-object)
+
+Texture with 3 dimensions.
+
+## Description
+
+**ImageTexture3D** is a 3-dimensional [ImageTexture](class_imagetexture.md#class-imagetexture) that has a width, height, and depth. See also [ImageTextureLayered](class_imagetexturelayered.md#class-imagetexturelayered).
+
+3D textures are typically used to store density maps for [FogMaterial](class_fogmaterial.md#class-fogmaterial), color correction LUTs for [Environment](class_environment.md#class-environment), vector fields for [GPUParticlesAttractorVectorField3D](class_gpuparticlesattractorvectorfield3d.md#class-gpuparticlesattractorvectorfield3d) and collision maps for [GPUParticlesCollisionSDF3D](class_gpuparticlescollisionsdf3d.md#class-gpuparticlescollisionsdf3d). 3D textures can also be used in custom shaders.
+
+## Methods
+
+| [Error](class_@globalscope.md#enum-globalscope-error)   | create(format: [Format](class_image.md#enum-image-format), width: [int](class_int.md#class-int), height: [int](class_int.md#class-int), depth: [int](class_int.md#class-int), use_mipmaps: [bool](class_bool.md#class-bool), data: [Array](class_array.md#class-array)[[Image](class_image.md#class-image)])   |
+|---------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|                                                         | update(data: [Array](class_array.md#class-array)[[Image](class_image.md#class-image)])                                                                                                                                                                                                                         |
+
+---
+
+## Method Descriptions
+
+[Error](class_@globalscope.md#enum-globalscope-error) **create**(format: [Format](class_image.md#enum-image-format), width: [int](class_int.md#class-int), height: [int](class_int.md#class-int), depth: [int](class_int.md#class-int), use_mipmaps: [bool](class_bool.md#class-bool), data: [Array](class_array.md#class-array)[[Image](class_image.md#class-image)])
+
+Creates the **ImageTexture3D** with specified `format`, `width`, `height`, and `depth`. If `use_mipmaps` is `true`, generates mipmaps for the **ImageTexture3D**.
+
+---
+
+ **update**(data: [Array](class_array.md#class-array)[[Image](class_image.md#class-image)])
+
+Replaces the texture's existing data with the layers specified in `data`. The size of `data` must match the parameters that were used for create(). In other words, the texture cannot be resized or have its format changed by calling update().

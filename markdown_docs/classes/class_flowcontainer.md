@@ -1,0 +1,136 @@
+# FlowContainer
+
+**Inherits:** [Container](class_container.md#class-container) **<** [Control](class_control.md#class-control) **<** [CanvasItem](class_canvasitem.md#class-canvasitem) **<** [Node](class_node.md#class-node) **<** [Object](class_object.md#class-object)
+
+**Inherited By:** [HFlowContainer](class_hflowcontainer.md#class-hflowcontainer), [VFlowContainer](class_vflowcontainer.md#class-vflowcontainer)
+
+A container that arranges its child controls horizontally or vertically and wraps them around at the borders.
+
+## Description
+
+A container that arranges its child controls horizontally or vertically and wraps them around at the borders. This is similar to how text in a book wraps around when no more words can fit on a line.
+
+## Tutorials
+
+- [Using Containers](../tutorials/ui/gui_containers.md)
+
+## Properties
+
+| AlignmentMode                 | alignment                     | `0`     |
+|--------------------------------------------------------------------|--------------------------------------------------------------------------|---------|
+| LastWrapAlignmentMode | last_wrap_alignment | `0`     |
+| [bool](class_bool.md#class-bool)                                   | reverse_fill               | `false` |
+| [bool](class_bool.md#class-bool)                                   | vertical                       | `false` |
+
+## Methods
+
+| [int](class_int.md#class-int)   | get_line_count()    |
+|---------------------------------|-------------------------------------------------------------------|
+
+## Theme Properties
+
+| [int](class_int.md#class-int)   | h_separation   | `4`   |
+|---------------------------------|--------------------------------------------------------------------|-------|
+| [int](class_int.md#class-int)   | v_separation   | `4`   |
+
+---
+
+## Enumerations
+
+enum **AlignmentMode**:
+
+AlignmentMode **ALIGNMENT_BEGIN** = `0`
+
+The child controls will be arranged at the beginning of the container, i.e. top if orientation is vertical, left if orientation is horizontal (right for RTL layout).
+
+AlignmentMode **ALIGNMENT_CENTER** = `1`
+
+The child controls will be centered in the container.
+
+AlignmentMode **ALIGNMENT_END** = `2`
+
+The child controls will be arranged at the end of the container, i.e. bottom if orientation is vertical, right if orientation is horizontal (left for RTL layout).
+
+---
+
+enum **LastWrapAlignmentMode**:
+
+LastWrapAlignmentMode **LAST_WRAP_ALIGNMENT_INHERIT** = `0`
+
+The last partially filled row or column will wrap aligned to the previous row or column in accordance with alignment.
+
+LastWrapAlignmentMode **LAST_WRAP_ALIGNMENT_BEGIN** = `1`
+
+The last partially filled row or column will wrap aligned to the beginning of the previous row or column.
+
+LastWrapAlignmentMode **LAST_WRAP_ALIGNMENT_CENTER** = `2`
+
+The last partially filled row or column will wrap aligned to the center of the previous row or column.
+
+LastWrapAlignmentMode **LAST_WRAP_ALIGNMENT_END** = `3`
+
+The last partially filled row or column will wrap aligned to the end of the previous row or column.
+
+---
+
+## Property Descriptions
+
+AlignmentMode **alignment** = `0`
+
+-  **set_alignment**(value: AlignmentMode)
+- AlignmentMode **get_alignment**()
+
+The alignment of the container's children (must be one of ALIGNMENT_BEGIN, ALIGNMENT_CENTER, or ALIGNMENT_END).
+
+---
+
+LastWrapAlignmentMode **last_wrap_alignment** = `0`
+
+-  **set_last_wrap_alignment**(value: LastWrapAlignmentMode)
+- LastWrapAlignmentMode **get_last_wrap_alignment**()
+
+The wrap behavior of the last, partially filled row or column (must be one of LAST_WRAP_ALIGNMENT_INHERIT, LAST_WRAP_ALIGNMENT_BEGIN, LAST_WRAP_ALIGNMENT_CENTER, or LAST_WRAP_ALIGNMENT_END).
+
+---
+
+[bool](class_bool.md#class-bool) **reverse_fill** = `false`
+
+-  **set_reverse_fill**(value: [bool](class_bool.md#class-bool))
+- [bool](class_bool.md#class-bool) **is_reverse_fill**()
+
+If `true`, reverses fill direction. Horizontal **FlowContainer**s will fill rows bottom to top, vertical **FlowContainer**s will fill columns right to left.
+
+When using a vertical **FlowContainer** with a right to left [Control.layout_direction](class_control.md#class-control-property-layout-direction), columns will fill left to right instead.
+
+---
+
+[bool](class_bool.md#class-bool) **vertical** = `false`
+
+-  **set_vertical**(value: [bool](class_bool.md#class-bool))
+- [bool](class_bool.md#class-bool) **is_vertical**()
+
+If `true`, the **FlowContainer** will arrange its children vertically, rather than horizontally.
+
+Can't be changed when using [HFlowContainer](class_hflowcontainer.md#class-hflowcontainer) and [VFlowContainer](class_vflowcontainer.md#class-vflowcontainer).
+
+---
+
+## Method Descriptions
+
+[int](class_int.md#class-int) **get_line_count**()
+
+Returns the current line count.
+
+---
+
+## Theme Property Descriptions
+
+[int](class_int.md#class-int) **h_separation** = `4`
+
+The horizontal separation of child nodes.
+
+---
+
+[int](class_int.md#class-int) **v_separation** = `4`
+
+The vertical separation of child nodes.

@@ -1,0 +1,9 @@
+# VisualShaderNodeDotProduct
+
+**Inherits:** [VisualShaderNode](class_visualshadernode.md#class-visualshadernode) **<** [Resource](class_resource.md#class-resource) **<** [RefCounted](class_refcounted.md#class-refcounted) **<** [Object](class_object.md#class-object)
+
+Calculates a dot product of two vectors within the visual shader graph.
+
+## Description
+
+Translates to `dot(a, b)` in the shader language.

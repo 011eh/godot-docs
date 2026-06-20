@@ -1,0 +1,25 @@
+# InputEventShortcut
+
+**Inherits:** [InputEvent](class_inputevent.md#class-inputevent) **<** [Resource](class_resource.md#class-resource) **<** [RefCounted](class_refcounted.md#class-refcounted) **<** [Object](class_object.md#class-object)
+
+Represents a triggered keyboard [Shortcut](class_shortcut.md#class-shortcut).
+
+## Description
+
+InputEventShortcut is a special event that can be received in [Node._input()](class_node.md#class-node-private-method-input), [Node._shortcut_input()](class_node.md#class-node-private-method-shortcut-input), and [Node._unhandled_input()](class_node.md#class-node-private-method-unhandled-input). It is typically sent by the editor's Command Palette to trigger actions, but can also be sent manually using [Viewport.push_input()](class_viewport.md#class-viewport-method-push-input).
+
+## Properties
+
+| [Shortcut](class_shortcut.md#class-shortcut)   | shortcut   |
+|------------------------------------------------|-----------------------------------------------------------|
+
+---
+
+## Property Descriptions
+
+[Shortcut](class_shortcut.md#class-shortcut) **shortcut**
+
+-  **set_shortcut**(value: [Shortcut](class_shortcut.md#class-shortcut))
+- [Shortcut](class_shortcut.md#class-shortcut) **get_shortcut**()
+
+The [Shortcut](class_shortcut.md#class-shortcut) represented by this event. Its [Shortcut.matches_event()](class_shortcut.md#class-shortcut-method-matches-event) method will always return `true` for this event.

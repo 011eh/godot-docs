@@ -1,0 +1,33 @@
+# BoxShape3D
+
+**Inherits:** [Shape3D](class_shape3d.md#class-shape3d) **<** [Resource](class_resource.md#class-resource) **<** [RefCounted](class_refcounted.md#class-refcounted) **<** [Object](class_object.md#class-object)
+
+A 3D box shape used for physics collision.
+
+## Description
+
+A 3D box shape, intended for use in physics. Usually used to provide a shape for a [CollisionShape3D](class_collisionshape3d.md#class-collisionshape3d).
+
+**Performance:** **BoxShape3D** is fast to check collisions against. It is faster than [CapsuleShape3D](class_capsuleshape3d.md#class-capsuleshape3d) and [CylinderShape3D](class_cylindershape3d.md#class-cylindershape3d), but slower than [SphereShape3D](class_sphereshape3d.md#class-sphereshape3d).
+
+## Tutorials
+
+- [3D Physics Tests Demo](https://godotengine.org/asset-library/asset/2747)
+- [3D Kinematic Character Demo](https://godotengine.org/asset-library/asset/2739)
+- [3D Platformer Demo](https://godotengine.org/asset-library/asset/2748)
+
+## Properties
+
+| [Vector3](class_vector3.md#class-vector3)   | size   | `Vector3(1, 1, 1)`   |
+|---------------------------------------------|-------------------------------------------|----------------------|
+
+---
+
+## Property Descriptions
+
+[Vector3](class_vector3.md#class-vector3) **size** = `Vector3(1, 1, 1)`
+
+-  **set_size**(value: [Vector3](class_vector3.md#class-vector3))
+- [Vector3](class_vector3.md#class-vector3) **get_size**()
+
+The box's width, height and depth.

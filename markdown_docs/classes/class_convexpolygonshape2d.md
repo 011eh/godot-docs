@@ -1,0 +1,48 @@
+# ConvexPolygonShape2D
+
+**Inherits:** [Shape2D](class_shape2d.md#class-shape2d) **<** [Resource](class_resource.md#class-resource) **<** [RefCounted](class_refcounted.md#class-refcounted) **<** [Object](class_object.md#class-object)
+
+A 2D convex polygon shape used for physics collision.
+
+## Description
+
+A 2D convex polygon shape, intended for use in physics. Used internally in [CollisionPolygon2D](class_collisionpolygon2d.md#class-collisionpolygon2d) when it's in [CollisionPolygon2D.BUILD_SOLIDS](class_collisionpolygon2d.md#class-collisionpolygon2d-constant-build-solids) mode.
+
+**ConvexPolygonShape2D** is *solid*, which means it detects collisions from objects that are fully inside it, unlike [ConcavePolygonShape2D](class_concavepolygonshape2d.md#class-concavepolygonshape2d) which is hollow. This makes it more suitable for both detection and physics.
+
+**Convex decomposition:** A concave polygon can be split up into several convex polygons. This allows dynamic physics bodies to have complex concave collisions (at a performance cost) and can be achieved by using several **ConvexPolygonShape2D** nodes or by using the [CollisionPolygon2D](class_collisionpolygon2d.md#class-collisionpolygon2d) node in [CollisionPolygon2D.BUILD_SOLIDS](class_collisionpolygon2d.md#class-collisionpolygon2d-constant-build-solids) mode. To generate a collision polygon from a sprite, select the [Sprite2D](class_sprite2d.md#class-sprite2d) node, go to the **Sprite2D** menu that appears above the viewport, and choose **Create Polygon2D Sibling**.
+
+**Performance:** **ConvexPolygonShape2D** is faster to check collisions against compared to [ConcavePolygonShape2D](class_concavepolygonshape2d.md#class-concavepolygonshape2d), but it is slower than primitive collision shapes such as [CircleShape2D](class_circleshape2d.md#class-circleshape2d) and [RectangleShape2D](class_rectangleshape2d.md#class-rectangleshape2d). Its use should generally be limited to medium-sized objects that cannot have their collision accurately represented by primitive shapes.
+
+## Properties
+
+| [PackedVector2Array](class_packedvector2array.md#class-packedvector2array)   | points   | `PackedVector2Array()`   |
+|------------------------------------------------------------------------------|---------------------------------------------------------|--------------------------|
+
+## Methods
+
+|    | set_point_cloud(point_cloud: [PackedVector2Array](class_packedvector2array.md#class-packedvector2array))   |
+|----|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+---
+
+## Property Descriptions
+
+[PackedVector2Array](class_packedvector2array.md#class-packedvector2array) **points** = `PackedVector2Array()`
+
+-  **set_points**(value: [PackedVector2Array](class_packedvector2array.md#class-packedvector2array))
+- [PackedVector2Array](class_packedvector2array.md#class-packedvector2array) **get_points**()
+
+The polygon's list of vertices that form a convex hull. Can be in either clockwise or counterclockwise order.
+
+**Warning:** Only set this property to a list of points that actually form a convex hull. Use set_point_cloud() to generate the convex hull of an arbitrary set of points.
+
+**Note:** The returned array is *copied* and any changes to it will not update the original property value. See [PackedVector2Array](class_packedvector2array.md#class-packedvector2array) for more details.
+
+---
+
+## Method Descriptions
+
+ **set_point_cloud**(point_cloud: [PackedVector2Array](class_packedvector2array.md#class-packedvector2array))
+
+Based on the set of points provided, this assigns the points property using the convex hull algorithm, removing all unneeded points. See [Geometry2D.convex_hull()](class_geometry2d.md#class-geometry2d-method-convex-hull) for details.

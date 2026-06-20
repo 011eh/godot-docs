@@ -1,0 +1,62 @@
+# RDUniform
+
+**Inherits:** [RefCounted](class_refcounted.md#class-refcounted) **<** [Object](class_object.md#class-object)
+
+Shader uniform (used by [RenderingDevice](class_renderingdevice.md#class-renderingdevice)).
+
+## Description
+
+This object is used by [RenderingDevice](class_renderingdevice.md#class-renderingdevice).
+
+## Properties
+
+| [int](class_int.md#class-int)                                            | binding           | `0`   |
+|--------------------------------------------------------------------------|--------------------------------------------------------|-------|
+| [UniformType](class_renderingdevice.md#enum-renderingdevice-uniformtype) | uniform_type | `3`   |
+
+## Methods
+
+|                                                                    | add_id(id: [RID](class_rid.md#class-rid))   |
+|--------------------------------------------------------------------|-------------------------------------------------------------------------------|
+|                                                                    | clear_ids()                              |
+| [Array](class_array.md#class-array)[[RID](class_rid.md#class-rid)] | get_ids()                                  |
+
+---
+
+## Property Descriptions
+
+[int](class_int.md#class-int) **binding** = `0`
+
+-  **set_binding**(value: [int](class_int.md#class-int))
+- [int](class_int.md#class-int) **get_binding**()
+
+The uniform's binding.
+
+---
+
+[UniformType](class_renderingdevice.md#enum-renderingdevice-uniformtype) **uniform_type** = `3`
+
+-  **set_uniform_type**(value: [UniformType](class_renderingdevice.md#enum-renderingdevice-uniformtype))
+- [UniformType](class_renderingdevice.md#enum-renderingdevice-uniformtype) **get_uniform_type**()
+
+The uniform's data type.
+
+---
+
+## Method Descriptions
+
+ **add_id**(id: [RID](class_rid.md#class-rid))
+
+Binds the given id to the uniform. The data associated with the id is then used when the uniform is passed to a shader.
+
+---
+
+ **clear_ids**()
+
+Unbinds all ids currently bound to the uniform.
+
+---
+
+[Array](class_array.md#class-array)[[RID](class_rid.md#class-rid)] **get_ids**()
+
+Returns an array of all ids currently bound to the uniform.

@@ -1,0 +1,47 @@
+# VideoStream
+
+**Inherits:** [Resource](class_resource.md#class-resource) **<** [RefCounted](class_refcounted.md#class-refcounted) **<** [Object](class_object.md#class-object)
+
+**Inherited By:** [VideoStreamTheora](class_videostreamtheora.md#class-videostreamtheora)
+
+Base resource for video streams.
+
+## Description
+
+Base resource type for all video streams. Classes that derive from **VideoStream** can all be used as resource types to play back videos in [VideoStreamPlayer](class_videostreamplayer.md#class-videostreamplayer).
+
+## Tutorials
+
+- [Playing videos](../tutorials/animation/playing_videos.md)
+- [Runtime file loading and saving](../tutorials/io/runtime_file_loading_and_saving.md)
+
+## Properties
+
+| [String](class_string.md#class-string)   | file   | `""`   |
+|------------------------------------------|--------------------------------------------|--------|
+
+## Methods
+
+| [VideoStreamPlayback](class_videostreamplayback.md#class-videostreamplayback)   | \_instantiate_playback()     |
+|---------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|
+
+---
+
+## Property Descriptions
+
+[String](class_string.md#class-string) **file** = `""`
+
+-  **set_file**(value: [String](class_string.md#class-string))
+- [String](class_string.md#class-string) **get_file**()
+
+The video file path or URI that this **VideoStream** resource handles.
+
+For [VideoStreamTheora](class_videostreamtheora.md#class-videostreamtheora), this filename should be an Ogg Theora video file with the `.ogv` extension.
+
+---
+
+## Method Descriptions
+
+[VideoStreamPlayback](class_videostreamplayback.md#class-videostreamplayback) **\_instantiate_playback**()
+
+Called when the video starts playing, to initialize and return a subclass of [VideoStreamPlayback](class_videostreamplayback.md#class-videostreamplayback).

@@ -1,0 +1,75 @@
+# SubViewportContainer
+
+**Inherits:** [Container](class_container.md#class-container) **<** [Control](class_control.md#class-control) **<** [CanvasItem](class_canvasitem.md#class-canvasitem) **<** [Node](class_node.md#class-node) **<** [Object](class_object.md#class-object)
+
+A container used for displaying the contents of a [SubViewport](class_subviewport.md#class-subviewport).
+
+## Description
+
+A container that displays the contents of underlying [SubViewport](class_subviewport.md#class-subviewport) child nodes. It uses the combined size of the [SubViewport](class_subviewport.md#class-subviewport)s as minimum size, unless stretch is enabled.
+
+**Note:** Changing a **SubViewportContainer**'s [Control.scale](class_control.md#class-control-property-scale) will cause its contents to appear distorted. To change its visual size without causing distortion, adjust the node's margins instead (if it's not already in a container).
+
+**Note:** The **SubViewportContainer** forwards mouse-enter and mouse-exit notifications to its sub-viewports.
+
+## Properties
+
+| [FocusMode](class_control.md#enum-control-focusmode)   | focus_mode                                                            | `1` (overrides [Control](class_control.md#class-control-property-focus-mode))   |
+|--------------------------------------------------------|-----------------------------------------------------------------------|---------------------------------------------------------------------------------|
+| [bool](class_bool.md#class-bool)                       | mouse_target     | `false`                                                                         |
+| [bool](class_bool.md#class-bool)                       | stretch               | `false`                                                                         |
+| [int](class_int.md#class-int)                          | stretch_shrink | `1`                                                                             |
+
+## Methods
+
+| [bool](class_bool.md#class-bool)   | \_propagate_input_event(event: [InputEvent](class_inputevent.md#class-inputevent))     |
+|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+
+---
+
+## Property Descriptions
+
+[bool](class_bool.md#class-bool) **mouse_target** = `false`
+
+-  **set_mouse_target**(value: [bool](class_bool.md#class-bool))
+- [bool](class_bool.md#class-bool) **is_mouse_target_enabled**()
+
+Configure, if either the **SubViewportContainer** or alternatively the [Control](class_control.md#class-control) nodes of its [SubViewport](class_subviewport.md#class-subviewport) children should be available as targets of mouse-related functionalities, like identifying the drop target in drag-and-drop operations or cursor shape of hovered [Control](class_control.md#class-control) node.
+
+If `false`, the [Control](class_control.md#class-control) nodes inside its [SubViewport](class_subviewport.md#class-subviewport) children are considered as targets.
+
+If `true`, the **SubViewportContainer** itself will be considered as a target.
+
+---
+
+[bool](class_bool.md#class-bool) **stretch** = `false`
+
+-  **set_stretch**(value: [bool](class_bool.md#class-bool))
+- [bool](class_bool.md#class-bool) **is_stretch_enabled**()
+
+If `true`, the sub-viewport will be automatically resized to the control's size.
+
+**Note:** If `true`, this will prohibit changing [SubViewport.size](class_subviewport.md#class-subviewport-property-size) of its children manually.
+
+---
+
+[int](class_int.md#class-int) **stretch_shrink** = `1`
+
+-  **set_stretch_shrink**(value: [int](class_int.md#class-int))
+- [int](class_int.md#class-int) **get_stretch_shrink**()
+
+Divides the sub-viewport's effective resolution by this value while preserving its scale. This can be used to speed up rendering.
+
+For example, a 1280×720 sub-viewport with stretch_shrink set to `2` will be rendered at 640×360 while occupying the same size in the container.
+
+**Note:** stretch must be `true` for this property to work.
+
+---
+
+## Method Descriptions
+
+[bool](class_bool.md#class-bool) **\_propagate_input_event**(event: [InputEvent](class_inputevent.md#class-inputevent))
+
+**Experimental:** This method may be changed or removed in future versions.
+
+Virtual method to be implemented by the user. If it returns `true`, the `event` is propagated to [SubViewport](class_subviewport.md#class-subviewport) children. Propagation doesn't happen if it returns `false`. If the function is not implemented, all events are propagated to SubViewports.

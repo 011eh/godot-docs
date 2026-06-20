@@ -1,0 +1,31 @@
+# Compositor
+
+**Experimental:** More customization of the rendering pipeline will be added in the future.
+
+**Inherits:** [Resource](class_resource.md#class-resource) **<** [RefCounted](class_refcounted.md#class-refcounted) **<** [Object](class_object.md#class-object)
+
+Stores attributes used to customize how a Viewport is rendered.
+
+## Description
+
+The compositor resource stores attributes used to customize how a [Viewport](class_viewport.md#class-viewport) is rendered.
+
+## Tutorials
+
+- [The Compositor](../tutorials/rendering/compositor.md)
+
+## Properties
+
+| [Array](class_array.md#class-array)[[CompositorEffect](class_compositoreffect.md#class-compositoreffect)]   | compositor_effects   | `[]`   |
+|-------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------|--------|
+
+---
+
+## Property Descriptions
+
+[Array](class_array.md#class-array)[[CompositorEffect](class_compositoreffect.md#class-compositoreffect)] **compositor_effects** = `[]`
+
+-  **set_compositor_effects**(value: [Array](class_array.md#class-array)[[CompositorEffect](class_compositoreffect.md#class-compositoreffect)])
+- [Array](class_array.md#class-array)[[CompositorEffect](class_compositoreffect.md#class-compositoreffect)] **get_compositor_effects**()
+
+The custom [CompositorEffect](class_compositoreffect.md#class-compositoreffect)s that are applied during rendering of viewports using this compositor.

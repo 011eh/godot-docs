@@ -1,0 +1,27 @@
+# VisualShaderNodeParticleEmitter
+
+**Inherits:** [VisualShaderNode](class_visualshadernode.md#class-visualshadernode) **<** [Resource](class_resource.md#class-resource) **<** [RefCounted](class_refcounted.md#class-refcounted) **<** [Object](class_object.md#class-object)
+
+**Inherited By:** [VisualShaderNodeParticleBoxEmitter](class_visualshadernodeparticleboxemitter.md#class-visualshadernodeparticleboxemitter), [VisualShaderNodeParticleMeshEmitter](class_visualshadernodeparticlemeshemitter.md#class-visualshadernodeparticlemeshemitter), [VisualShaderNodeParticleRingEmitter](class_visualshadernodeparticleringemitter.md#class-visualshadernodeparticleringemitter), [VisualShaderNodeParticleSphereEmitter](class_visualshadernodeparticlesphereemitter.md#class-visualshadernodeparticlesphereemitter)
+
+A base class for particle emitters.
+
+## Description
+
+Particle emitter nodes can be used in "start" step of particle shaders and they define the starting position of the particles. Connect them to the Position output port.
+
+## Properties
+
+| [bool](class_bool.md#class-bool)   | mode_2d   | `false`   |
+|------------------------------------|----------------------------------------------------------------------|-----------|
+
+---
+
+## Property Descriptions
+
+[bool](class_bool.md#class-bool) **mode_2d** = `false`
+
+-  **set_mode_2d**(value: [bool](class_bool.md#class-bool))
+- [bool](class_bool.md#class-bool) **is_mode_2d**()
+
+If `true`, the result of this emitter is projected to 2D space. By default it is `false` and meant for use in 3D space.

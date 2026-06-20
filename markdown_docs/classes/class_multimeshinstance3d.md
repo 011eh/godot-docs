@@ -1,0 +1,33 @@
+# MultiMeshInstance3D
+
+**Inherits:** [GeometryInstance3D](class_geometryinstance3d.md#class-geometryinstance3d) **<** [VisualInstance3D](class_visualinstance3d.md#class-visualinstance3d) **<** [Node3D](class_node3d.md#class-node3d) **<** [Node](class_node.md#class-node) **<** [Object](class_object.md#class-object)
+
+Node that instances a [MultiMesh](class_multimesh.md#class-multimesh).
+
+## Description
+
+**MultiMeshInstance3D** is a specialized node to instance [GeometryInstance3D](class_geometryinstance3d.md#class-geometryinstance3d)s based on a [MultiMesh](class_multimesh.md#class-multimesh) resource.
+
+This is useful to optimize the rendering of a high number of instances of a given mesh (for example trees in a forest or grass strands).
+
+## Tutorials
+
+- [Using MultiMeshInstance](../tutorials/3d/using_multi_mesh_instance.md)
+- [Optimization using MultiMeshes](../tutorials/performance/using_multimesh.md)
+- [Animating thousands of fish with MultiMeshInstance](../tutorials/performance/vertex_animation/animating_thousands_of_fish.md)
+
+## Properties
+
+| [MultiMesh](class_multimesh.md#class-multimesh)   | multimesh   |
+|---------------------------------------------------|--------------------------------------------------------------|
+
+---
+
+## Property Descriptions
+
+[MultiMesh](class_multimesh.md#class-multimesh) **multimesh**
+
+-  **set_multimesh**(value: [MultiMesh](class_multimesh.md#class-multimesh))
+- [MultiMesh](class_multimesh.md#class-multimesh) **get_multimesh**()
+
+The [MultiMesh](class_multimesh.md#class-multimesh) resource that will be used and shared among all instances of the **MultiMeshInstance3D**.
